@@ -1,0 +1,40 @@
+{
+  "currFolder": "/home/fgrondin",
+  "childs": [
+    {
+      "path": "/home/fgrondin",
+      "fileName": "dir1",
+      "type": "FOLDER"
+    },
+    {
+      "path": "/home/fgrondin",
+      "fileName": "dir2",
+      "type": "FOLDER"
+    },
+    {
+      "path": "/home/fgrondin",
+      "fileName": "dir3",
+      "type": "FOLDER"
+    },
+    {
+      "path": "/home/fgrondin",
+      "fileName": "fic1",
+      "type": "FILE"
+    },
+    {
+      "path": "/home/fgrondin",
+      "fileName": "fic2",
+      "type": "FILE"
+    },
+    {
+      "path": "/home/fgrondin",
+      "fileName": "fic3",
+      "type": "FILE"
+    },
+    {
+      "path": "/home/fgrondin",
+      "fileName": "fic4",
+      "type": "FILE"
+    }
+  ]
+}

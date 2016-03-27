@@ -1,0 +1,25 @@
+{
+  "currFolder": null,
+  "childs": [
+    {
+      "path": "/home/fgrondin",
+      "fileName": "dir1",
+      "type": "FOLDER"
+    },
+    {
+      "path": "/home/fgrondin/Dev",
+      "fileName": "dir2",
+      "type": "FOLDER"
+    },
+    {
+      "path": "/usr/share",
+      "fileName": "dir3",
+      "type": "FOLDER"
+    },
+    {
+      "path": "/var/log",
+      "fileName": "fic1",
+      "type": "FOLDER"
+    }
+  ]
+}

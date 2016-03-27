@@ -1,0 +1,20 @@
+{
+  "currFolder": "/home/fgrondin/dir2",
+  "childs": [
+    {
+      "path": "/home/fgrondin/dir2",
+      "fileName": "folder1",
+      "type": "FOLDER"
+    },
+    {
+      "path": "/home/fgrondin/dir2",
+      "fileName": "folder2",
+      "type": "FOLDER"
+    },
+    {
+      "path": "/home/fgrondin/dir2",
+      "fileName": "file1",
+      "type": "FILE"
+    }
+  ]
+}
