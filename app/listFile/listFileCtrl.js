@@ -12,19 +12,27 @@ angular.module('myApp.listFileCtrl', ['ngRoute'])
     .controller('ListFileCtrl', ['$scope', 'listFileServ', function ($scope, listFileServ) {
 
         var getRootFolder = function () {
-            $scope.files = listFileServ.getRootFolder.query();
+            $scope.rootFolders = listFileServ.getRootFolder.query();
         };
 
-       var getFolderContent = function (index) {
-           var fileVO = $scope.files.childs[index];
-           console.log(fileVO);
-            $scope.files = listFileServ.getFolderContent.query({getFolderContent_id: 'getFolderContent_1'});
+        var getRootFolderContent = function(index) {
+            console.log(index);
+            var fileVO = $scope.rootFolders.childs[index];
+            console.log(fileVO);
+            $scope.files = listFileServ.getFolderContent.query({getFolderContent_id: 'getFolderContent_' + index});
+        }
+
+        var getFolderContent = function (index) {
+            var fileVO = $scope.files.childs[index];
+            console.log(fileVO);
+            $scope.files = listFileServ.getFolderContent.query({getFolderContent_id: 'getFolderContent_' + index});
         }
 
         $scope.getRootFolder = getRootFolder;
         $scope.getFolderContent = getFolderContent;
+        $scope.getRootFolderContent = getRootFolderContent;
 
-        if ($scope.files === undefined) {
+        if ($scope.rootFolders === undefined) {
             getRootFolder();
         }
     }]);

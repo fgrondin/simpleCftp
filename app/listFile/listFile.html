@@ -1,74 +1,48 @@
-<h1>Greeting</h1>
-<div ng-show="authenticated">
-    <p>User is authenticated!!</p>
-</div>
-<div ng-show="!authenticated">
-    <p>Login to see your greeting</p>
-</div>
+<!--<h1>Greeting</h1>-->
+<!--<div ng-show="authenticated">-->
+<!--<p>User is authenticated!!</p>-->
+<!--</div>-->
+<!--<div ng-show="!authenticated">-->
+<!--<p>Login to see your greeting</p>-->
+<!--</div>-->
 
 <!-- Page Content -->
 <div class="container">
 
-    <!-- Jumbotron Header -->
-    <header class="jumbotron hero-spacer">
-        |
-        <div class="row">
-            <div class="col-sm-3 col-md-6 col-lg-4" style="background-color:yellow;">
-                <img ng-src="img/mydocs.png"/>
-                <p>
-                    <a class="btn btn-primary btn-large">Call to action!</a>
-                </p>
-            </div>
-            <div class="col-sm-9 col-md-6 col-lg-8" style="background-color:pink;">
-                <h1>A Warm Welcome!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non
-                    incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-            </div>
-        </div>
-
-    </header>
-
-    <hr>
-
-    <!-- Title -->
     <div class="row">
-        <div class="col-lg-12">
-            <h3>Latest Features</h3>
+
+        <div class="col-md-3">
+            <p class="lead">Root Folder</p>
+            <div class="list-group">
+                <a href ng-repeat="roots in rootFolders.childs" ng-click="getRootFolderContent($index)"
+                   class="list-group-item">{{roots.fileName}}</a>
+            </div>
         </div>
-    </div>
-    <!-- /.row -->
 
-    <!-- Page Features -->
-    <div class="row text-center">
+        <div class="col-md-9">
 
-        <div ng-repeat="file in files.childs" class="col-md-3 col-sm-6 hero-feature">
-            <div class="thumbnail">
-                <img ng-if="file.type == 'FOLDER'" ng-src="img/folder.png"/>
-                <img ng-if="file.type == 'FILE'" ng-src="img/file.png"/>
-                <div class="caption">
-                    <h3>{{file.fileName}}</h3>
-                    <p></p>
-                    <p>
-                        <a href ng-click="getFolderContent($index)" class="btn btn-primary">Explore</a>
-                        <a href="#" class="btn btn-default">More Info</a>
-                    </p>
+            <div class="row">
+
+                <div ng-repeat="file in files.childs" class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="thumbnail">
+                        <img ng-if="file.type == 'FOLDER'" ng-src="img/folder(3).png"/>
+                        <img ng-if="file.type == 'FILE'" ng-src="img/file(3).png"/>
+                        <div class="caption">
+                            <h4 class="pull-right">
+                                <a href ng-click="getFolderContent($index)" class="btn btn-primary">
+                                    {{file.type == 'FOLDER'? 'Explore': 'Download'}}
+                                </a>
+                            </h4>
+                            <h4>{{file.fileName}}</h4>
+                        </div>
+                    </div>
                 </div>
+
             </div>
+
         </div>
 
     </div>
-    <!-- /.row -->
-
-    <hr>
-
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; FG</p>
-            </div>
-        </div>
-    </footer>
 
 </div>
 <!-- /.container -->

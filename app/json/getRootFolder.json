@@ -15,11 +15,6 @@
       "path": "/usr/share",
       "fileName": "dir3",
       "type": "FOLDER"
-    },
-    {
-      "path": "/var/log",
-      "fileName": "fic1",
-      "type": "FOLDER"
     }
   ]
 }
